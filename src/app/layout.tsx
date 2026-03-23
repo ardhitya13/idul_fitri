@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Malam Takbiran Ardhitya | Kartu Idul Fitri Digital",
   description:
     "Kartu Idul Fitri digital dengan nuansa malam takbiran, bintang bergerak, dan animasi pembuka yang estetik.",
+  icons: {
+    icon: "/logo-idul-fitri.svg",
+    shortcut: "/logo-idul-fitri.svg",
+    apple: "/logo-idul-fitri.svg",
+  },
 };
 
 export default function RootLayout({
