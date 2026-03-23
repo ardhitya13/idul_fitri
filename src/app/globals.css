@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #07111f;
+  --foreground: #f8fafc;
+  --color-night: #07111f;
+  --color-dawn: #12335f;
+  --color-glow: #f6d365;
+  --color-mint: #7ce0c3;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
+  --font-mono: "Consolas", "Courier New", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(246, 211, 101, 0.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(124, 224, 195, 0.12), transparent 28%),
+    linear-gradient(180deg, var(--color-dawn) 0%, var(--color-night) 55%, #040912 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
+}
+
+.hero-glow {
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+  height: 22rem;
+  width: 22rem;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.55;
+}
+
+.hero-glow-left {
+  left: -6rem;
+  top: 4rem;
+  background: rgba(246, 211, 101, 0.22);
+}
+
+.hero-glow-right {
+  right: -4rem;
+  top: 12rem;
+  background: rgba(124, 224, 195, 0.18);
 }
