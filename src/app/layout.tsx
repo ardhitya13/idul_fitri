@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ucapan Selamat Idul Fitri",
+  title: "Malam Takbiran Ardhitya | Kartu Idul Fitri Digital",
   description:
-    "Landing page ucapan Selamat Idul Fitri dengan Next.js dan panduan belajar git branch.",
+    "Kartu Idul Fitri digital dengan nuansa malam takbiran, bintang bergerak, dan animasi pembuka yang estetik.",
 };
 
 export default function RootLayout({
